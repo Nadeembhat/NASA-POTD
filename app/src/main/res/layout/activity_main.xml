@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.view.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageRoot"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/imageTouch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/nasa"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/videoRoot"
+        android:visibility="gone"
+        >
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/videoview"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/general"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/background"
+            android:scaleType="fitXY"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fabButton"
+            android:text="Description"
+            android:gravity="center"
+            android:textColor="#FF2B2B"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="257dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Title"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="43dp"
+            android:layout_toStartOf="@+id/calender"
+            android:layout_alignParentTop="true"
+            android:textColor="#FF2B2B"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/date_24dp"
+            android:layout_alignParentTop="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="15dp"
+            app:backgroundTint="#FFFFFF"
+            app:borderWidth="20sp"
+            app:elevation="6dp"
+            app:fabSize="normal" />
+
+    </RelativeLayout>
+</RelativeLayout>
